@@ -1,0 +1,4 @@
+.vscode
+node_modules
+# generated output files of the scripts
+tools/out*

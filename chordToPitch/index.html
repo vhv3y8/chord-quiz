@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코드 이름 -> 음이름 - Chord Quiz</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1><a href="/">Chord Quiz</a></h1>
+  </header>
+
+  <main>
+    <article id="startOptions">
+      <hr>
+      <label for="major">
+        <input type="checkbox" checked id="major"><span class="chordType">major</span><span
+          class="chordExample">C</span>
+      </label>
+      <hr>
+      <label for="minor">
+        <input type="checkbox" checked id="minor"><span class="chordType">minor</span><span
+          class="chordExample">Cm</span>
+      </label>
+      <hr>
+      <label for="7">
+        <input type="checkbox" checked id="7"><span class="chordType">7th</span><span class="chordExample">C7</span>
+      </label>
+      <hr>
+      <label for="m7">
+        <input type="checkbox" checked id="m7"><span class="chordType">minor 7th</span><span
+          class="chordExample">Cm7</span>
+      </label>
+      <hr>
+      <label for="M7">
+        <input type="checkbox" checked id="M7"><span class="chordType">major 7th</span><span
+          class="chordExample">CM7</span>
+      </label>
+      <hr>
+      <label for="mM7">
+        <input type="checkbox" checked id="mM7"><span class="chordType">minor major 7th</span><span
+          class="chordExample">CmM7</span>
+      </label>
+      <hr>
+
+      <label for="hint">
+        <input type="checkbox" name="" id="hint"><span></span>
+      </label>
+
+      <button id="startBtn">
+        START!!!
+      </button>
+    </article>
+
+    <article id="quizMain">
+      <section id="question">
+        <span>C#mM7</span>
+      </section>
+
+      <section id="hintImg">
+        <img src="/assets/chord/C/c.png" alt="" width="400">
+      </section>
+
+      <section id="answerTextSection">
+        <span id="answerText">C - Eb - G - Bb</span>
+      </section>
+
+      <section id="answerImgSection">
+        <img src="" alt="" id="answerImg">
+      </section>
+
+      <button id="next">
+        <span>정답 보기 다음으로</span>
+      </button>
+    </article>
+  </main>
+
+  <footer>
+    <p>by @vhv3y8</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

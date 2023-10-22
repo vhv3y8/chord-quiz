@@ -1,0 +1,16 @@
+{
+  "name": "chord-quiz",
+  "version": "1.0.0",
+  "description": "https://www.hellosimply.com/blog/piano-beginner/quickly-learn-piano-notes-and-chords/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "npx sass --no-source-map chordToPitch/style.scss:chordToPitch/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.4"
+  }
+}
