@@ -48,7 +48,7 @@
       <hr>
 
       <label for="hint">
-        <input type="checkbox" name="" id="hint"><span></span>
+        <input type="checkbox" name="" id="hint">피아노 그림 보기 (힌트)<span></span>
       </label>
 
       <button id="startBtn">
@@ -58,7 +58,7 @@
 
     <article id="quizMain">
       <section id="question">
-        <span>C#mM7</span>
+        <span id="questionText"></span>
       </section>
 
       <section id="hintImg">
@@ -66,11 +66,12 @@
       </section>
 
       <section id="answerTextSection">
-        <span id="answerText">C - Eb - G - Bb</span>
+        <span id="answerText"></span>
       </section>
 
       <section id="answerImgSection">
         <img src="" alt="" id="answerImg">
+        <span><a href="" id="answerImgSourceLink"></a></span>
       </section>
 
       <button id="next">

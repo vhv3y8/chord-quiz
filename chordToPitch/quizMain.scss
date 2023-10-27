@@ -44,8 +44,12 @@ section#answerTextSection {
   font-family: "Noto Sans", sans-serif;
 }
 
-article#answerImgSection {
+section#answerImgSection {
+  height: 225px;
+
   border-inline: var(--border-for-section);
   border-block-end: var(--border-for-section);
-  height: 225px;
+
+  display: grid;
+  place-items: center;
 }

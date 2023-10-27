@@ -1,16 +1,9 @@
-import {
-  chordToPitchNames,
-  chordToImgLocation,
-  chordsToInclude,
-} from "./constant.js";
-
-function start(options) {
-  console.log(options);
-}
+import { Quiz } from "./help.js";
 
 const startBtn = document.getElementById("startBtn");
 const startOptions = document.getElementById("startOptions");
 const quizMain = document.getElementById("quizMain");
+const nextBtn = document.getElementById("next");
 
 startBtn.addEventListener("click", (e) => {
   // get options
@@ -24,11 +17,28 @@ startBtn.addEventListener("click", (e) => {
     hint: document.getElementById("hint").checked,
   };
   // start
-  start(options);
+  Quiz.options = options;
+  Quiz.createChordNamesList();
+
+  if (Quiz.statusIsAnswerHidden) {
+    Quiz.showAnswer();
+    Quiz.statusIsAnswerHidden = !Quiz.statusIsAnswerHidden;
+  } else {
+    Quiz.next();
+    Quiz.statusIsAnswerHidden = !Quiz.statusIsAnswerHidden;
+  }
 
   // switch ui
   startOptions.style.display = "none";
   quizMain.style.display = "block";
 });
 
-class Quiz {}
+nextBtn.addEventListener("click", (e) => {
+  if (Quiz.statusIsAnswerHidden) {
+    Quiz.showAnswer();
+    Quiz.statusIsAnswerHidden = !Quiz.statusIsAnswerHidden;
+  } else {
+    Quiz.next();
+    Quiz.statusIsAnswerHidden = !Quiz.statusIsAnswerHidden;
+  }
+});
