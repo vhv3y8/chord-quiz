@@ -6,6 +6,10 @@ article#quizMain {
   display: none;
 }
 
+div#questionPart {
+  margin-bottom: 2.5vh;
+}
+
 section#question {
   width: min(700px, calc(100vw - 4rem));
   height: 2.5em;
@@ -22,7 +26,7 @@ section#question {
 }
 
 section#hintImg {
-  margin: 0 0 2.5vh;
+  margin: 0;
   height: min(190px, 20vh);
 
   // display: flex;
@@ -61,6 +65,16 @@ section#answerImgSection {
 
   img#answerImg {
     width: min(400px, 60vw);
+  }
+
+  a#answerImgSourceLink {
+    font-family: "Noto Sans", sans-serif;
+    padding: 0.2em;
+    text-decoration: 2px underline;
+
+    &:hover {
+      background-color: #ddd;
+    }
   }
 }
 

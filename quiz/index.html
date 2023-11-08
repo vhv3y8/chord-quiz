@@ -48,8 +48,8 @@
       <hr>
 
       <label for="hint">
-        <input type="checkbox" name="" id="hint">
-        <span>피아노 그림 보기 (힌트)</span>
+        <input type="checkbox" name="hint" id="hint">
+        <span>힌트 피아노 그림 보기 (C코드)</span>
       </label>
 
       <button id="startBtn">
@@ -58,13 +58,15 @@
     </article>
 
     <article id="quizMain">
-      <section id="question">
-        <span id="questionText"></span>
-      </section>
+      <div id="questionPart">
+        <section id="question">
+          <span id="questionText"></span>
+        </section>
 
-      <section id="hintImg">
-        <img src="/assets/chord/C/c.png" alt="">
-      </section>
+        <section id="hintImg">
+          <img src="../assets/chord/C/c.png" alt="">
+        </section>
+      </div>
 
       <section id="answerTextSection">
         <span id="answerText"></span>
@@ -72,17 +74,17 @@
 
       <section id="answerImgSection">
         <img src="" alt="" id="answerImg">
-        <span><a href="" id="answerImgSourceLink"></a></span>
+        <span><a href="" id="answerImgSourceLink" target="_blank"></a></span>
       </section>
 
       <button id="next" class="showAnswer">
-        <span>정답 보기 다음으로</span>
+        정답 보기
       </button>
     </article>
   </main>
 
   <footer>
-    <p>by @vhv3y8</p>
+    <p>by <a href="https://github.com/vhv3y8" target="_blank">@vhv3y8</a></p>
   </footer>
 
   <script type="module" src="js/index.js"></script>

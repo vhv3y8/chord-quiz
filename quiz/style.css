@@ -73,6 +73,10 @@ article#quizMain {
   display: none;
 }
 
+div#questionPart {
+  margin-bottom: 2.5vh;
+}
+
 section#question {
   width: min(700px, 100vw - 4rem);
   height: 2.5em;
@@ -86,7 +90,7 @@ section#question {
 }
 
 section#hintImg {
-  margin: 0 0 2.5vh;
+  margin: 0;
   height: min(190px, 20vh);
   display: grid;
   place-items: center;
@@ -115,6 +119,14 @@ section#answerImgSection {
 }
 section#answerImgSection img#answerImg {
   width: min(400px, 60vw);
+}
+section#answerImgSection a#answerImgSourceLink {
+  font-family: "Noto Sans", sans-serif;
+  padding: 0.2em;
+  text-decoration: 2px underline;
+}
+section#answerImgSection a#answerImgSourceLink:hover {
+  background-color: #ddd;
 }
 
 button#next {
@@ -147,6 +159,13 @@ button#next:hover.next {
   background-color: black;
 }
 
+a,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
 html,
 body {
   margin: 0;
@@ -161,15 +180,19 @@ body {
 
 footer {
   font-family: "Mulish", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 3rem;
 }
 
-a,
-a:visited,
-a:active {
-  color: inherit;
-  text-decoration: none;
+footer > p > a {
+  padding: 0.2em;
+  color: #019166;
+}
+footer > p > a:active, footer > p > a:visited {
+  color: #019166;
+}
+footer > p > a:hover {
+  background-color: #ddd;
 }
 
 header {

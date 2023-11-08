@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "npx sass --no-source-map chordToPitch/scss/style.scss:chordToPitch/style.css"
+    "scss": "npx sass --no-source-map quiz/scss/style.scss:quiz/style.css"
   },
   "keywords": [],
   "author": "",
