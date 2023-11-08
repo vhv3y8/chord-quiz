@@ -285,6 +285,8 @@ const chordsToInclude = {
   mM7: true,
 };
 
+const chordNamesToLinkText = {};
+
 export {
   pitchNames,
   chordTypes,

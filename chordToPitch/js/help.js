@@ -6,7 +6,12 @@ import {
   chordsToInclude,
   chordTypesToPostFix,
 } from "./constant.js";
-import { questionTextElem, answerTextElem, answerImgElem } from "./ui.js";
+import {
+  questionTextElem,
+  answerTextElem,
+  answerImgElem,
+  answerImgSourceLink,
+} from "./ui.js";
 
 class Quiz {
   static options;

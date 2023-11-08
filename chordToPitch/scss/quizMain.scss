@@ -7,7 +7,7 @@ article#quizMain {
 }
 
 section#question {
-  width: 700px;
+  width: min(700px, calc(100vw - 4rem));
   height: 2.5em;
 
   /* background-color: #ddd; */
@@ -22,15 +22,21 @@ section#question {
 }
 
 section#hintImg {
-  margin: 0 0 2rem;
-  height: 190px;
+  margin: 0 0 2.5vh;
+  height: min(190px, 20vh);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  display: grid;
+  place-items: center;
 
   border-inline: var(--border-for-section);
   border-block-end: var(--border-for-section);
+
+  img {
+    width: min(400px, 60vw);
+  }
 }
 
 section#answerTextSection {
@@ -45,11 +51,49 @@ section#answerTextSection {
 }
 
 section#answerImgSection {
-  height: 225px;
+  height: min(225px, 20vh);
 
   border-inline: var(--border-for-section);
   border-block-end: var(--border-for-section);
 
   display: grid;
   place-items: center;
+
+  img#answerImg {
+    width: min(400px, 60vw);
+  }
+}
+
+button#next {
+  width: 100%;
+  height: 5rem;
+
+  outline: none;
+  border: 1px solid black;
+  background-color: #7df26f;
+
+  margin-top: 2rem;
+
+  font-size: 18px;
+
+  &.showAnswer {
+    background-color: #7df26f;
+  }
+
+  &.next {
+    background-color: #f2f06f;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &.showAnswer {
+      // background-color: #6fd964;
+      background-color: #75e66a;
+    }
+
+    &.next {
+      background-color: #ebe96e;
+    }
+  }
 }

@@ -41,4 +41,15 @@ nextBtn.addEventListener("click", (e) => {
     Quiz.next();
     Quiz.statusIsAnswerHidden = !Quiz.statusIsAnswerHidden;
   }
+
+  console.log(nextBtn.classList);
+  if (nextBtn.classList.contains("showAnswer")) {
+    nextBtn.classList.remove("showAnswer");
+    nextBtn.classList.add("next");
+    console.log("contains showAnswer");
+  } else if (nextBtn.classList.contains("next")) {
+    nextBtn.classList.remove("next");
+    nextBtn.classList.add("showAnswer");
+    console.log("contains next");
+  }
 });

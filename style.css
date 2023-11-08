@@ -28,6 +28,12 @@ header h1 {
   font-size: 40px;
 }
 
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 30px;
+  }
+}
+
 header h1 a:hover {
   background-color: #eee;
 }
@@ -56,7 +62,7 @@ a:active {
   padding: 0.8em;
   margin-bottom: 1rem;
 
-  width: 500px;
+  width: min(500px, calc(100vw - 4rem));
 
   border: 2px solid black;
 
@@ -64,8 +70,14 @@ a:active {
 }
 
 .startBtn p {
-  font-size: 22px;
   margin: 0.25em 0 0.5em;
+  font-size: 22px;
+}
+
+@media (max-width: 600px) {
+  .startBtn p {
+    font-size: 18px;
+  }
 }
 
 .startBtn span {
