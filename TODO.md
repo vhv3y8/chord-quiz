@@ -4,8 +4,6 @@ now
 - [ ] PWA로 만들기
 - [ ] i18n
 
-- [ ] tools에 쌩으로 있는 건 지우고 next를 tools로 옮기기
-
 - 피아노 그림 그리기?
 
 after
@@ -27,3 +25,5 @@ done
 - [x] url query
 - [x] 리팩토링
 - [x] Pitch -> Chord
+- [x] tools에 쌩으로 있는 건 지우고 next를 tools로 옮기기
+- [x] line break

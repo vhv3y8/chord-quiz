@@ -88,12 +88,6 @@ footer > p > a:hover {
   font-size: 22px;
 }
 
-@media (max-width: 600px) {
-  .startBtn p {
-    font-size: 18px;
-  }
-}
-
 .startBtn span {
   color: gray;
   font-size: 18px;
@@ -102,4 +96,19 @@ footer > p > a:hover {
 .startBtn:hover {
   background-color: #ccc;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .startBtn p {
+    font-size: 16px;
+    margin: 2px 0 4px;
+  }
+
+  .startBtn span {
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 16px;
+  }
 }

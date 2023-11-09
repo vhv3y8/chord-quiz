@@ -63,6 +63,9 @@ section#answerImgSection {
   display: grid;
   place-items: center;
 
+  grid-auto-columns: min-content;
+  justify-content: center;
+
   img#answerImg {
     width: min(400px, 60vw);
   }
@@ -76,6 +79,11 @@ section#answerImgSection {
       background-color: #ddd;
     }
   }
+
+  span {
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
 }
 
 button#next {
@@ -84,30 +92,47 @@ button#next {
 
   outline: none;
   border: 1px solid black;
-  background-color: #7df26f;
+  background-color: #c5edc0;
 
   margin-top: 2rem;
 
   font-size: 18px;
 
   &.showAnswer {
-    background-color: #7df26f;
+    background-color: #c5edc0;
   }
 
   &.next {
-    background-color: #f2f06f;
+    background-color: #f2f2ae;
   }
 
   &:hover {
     cursor: pointer;
 
     &.showAnswer {
-      // background-color: #6fd964;
-      background-color: #75e66a;
+      background-color: #bee3ba;
     }
 
     &.next {
-      background-color: #ebe96e;
+      background-color: #e8e8a0;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  section#question {
+    font-size: 20px;
+  }
+
+  section#answerTextSection {
+    font-size: 20px;
+  }
+
+  a#answerImgSourceLink {
+    font-size: 14px;
+  }
+
+  button#next {
+    font-size: 16px;
   }
 }
