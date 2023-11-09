@@ -15,13 +15,20 @@ startBtn.addEventListener("click", (e) => {
 
 document.addEventListener("DOMContentLoaded", (e) => {
   // set problemIsChordName from query string
-  let params = Object.fromEntries(
+  let params = new URLSearchParams(window.location.search);
+  let paramObj = Object.fromEntries(
     new URLSearchParams(window.location.search).entries()
   );
-  if (params.problem === "chordtopitch") {
-    problemIsChordName = true;
-  } else if (params.problem === "pitchtochord") {
+
+  if (paramObj.problem === "pitchtochord") {
     problemIsChordName = false;
+  } else {
+    params.set("problem", "chordtopitch");
+    window.history.replaceState(
+      {},
+      "",
+      `${window.location.pathname}?${params.toString()}`
+    );
   }
 });
 

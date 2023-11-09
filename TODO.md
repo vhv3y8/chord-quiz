@@ -1,6 +1,5 @@
 now
 
-- [ ] img location 제대로 설정하기
 - [ ] PWA로 만들기
 - [ ] i18n
 
@@ -27,3 +26,4 @@ done
 - [x] Pitch -> Chord
 - [x] tools에 쌩으로 있는 건 지우고 next를 tools로 옮기기
 - [x] line break
+- [x] img location 제대로 설정하기

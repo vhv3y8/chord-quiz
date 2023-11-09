@@ -84,7 +84,6 @@ div#questionPart {
 section#question {
   width: min(700px, 100vw - 4rem);
   height: 2.5em;
-  /* background-color: #ddd; */
   border: var(--border-for-section);
   font-family: "Open Sans", sans-serif;
   font-size: 28px;
@@ -116,6 +115,7 @@ section#answerTextSection {
 
 section#answerImgSection {
   height: min(225px, 20vh);
+  padding: 1em;
   border-inline: var(--border-for-section);
   border-block-end: var(--border-for-section);
   display: grid;
@@ -227,8 +227,7 @@ header {
 header h1 {
   font-family: "Secular One", sans-serif;
   font-size: 40px;
-  margin-top: 0.75em;
-  margin-bottom: 0.5em;
+  margin-block: 1em;
 }
 header h1 a:hover {
   background-color: #eee;

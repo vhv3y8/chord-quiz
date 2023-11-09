@@ -3,7 +3,7 @@ import {
   matchChordNameToImgLocation,
   matchChordNameToImgSourceLink,
   getChordNames,
-} from "./constant.js";
+} from "./datas.js";
 import {
   questionTextElem,
   answerTextElem,
@@ -91,7 +91,7 @@ export class Quiz {
   #nextProblem() {
     const nextChordName = this.#pickChordName();
     const nextPitchNames = matchChordNameToPitches[nextChordName];
-    // const nextAnswerImgLocation = matchChordNameToImgLocation[nextChordName];
+    const nextAnswerImgLocation = matchChordNameToImgLocation[nextChordName];
     const nextAnswerImgLink = matchChordNameToImgSourceLink[nextChordName];
     console.log("nextPitchNames: ", nextPitchNames);
 
@@ -103,7 +103,7 @@ export class Quiz {
       questionTextElem.textContent = nextPitchNames.join(" - ");
       answerTextElem.textContent = nextChordName;
     }
-    answerImgElem.src = nextAnswerImgLink;
+    answerImgElem.src = nextAnswerImgLocation;
     answerImgSourceLink.href = nextAnswerImgLink;
     answerImgSourceLink.textContent = nextAnswerImgLink;
 
@@ -148,56 +148,4 @@ export class Quiz {
 
     return picked;
   }
-
-  //
-
-  // static options;
-  // static prevCount = 5;
-  // static prevChordNames = [];
-  // static statusIsAnswerHidden = false;
-  // static chordNamesList = [];
-
-  // static createChordNamesList() {
-  //   console.log("wtf");
-  //   const chordTypeArr = [];
-
-  //   for (const type of chordTypes) {
-  //     if (this.options[type] && type !== "hint") {
-  //       console.log(`type is ${type}`);
-  //       chordTypeArr.push(chordTypesToPostFix[type]);
-  //     }
-  //   }
-
-  //   console.log(chordTypeArr);
-
-  //   for (const pitch of pitchNames) {
-  //     for (const type of chordTypeArr) {
-  //       this.chordNamesList.push(`${pitch}${type}`);
-  //     }
-  //   }
-  //   console.log(this.chordNamesList);
-  // }
-
-  // static showAnswer() {
-  //   console.log("showAnswer");
-  //   // change text
-  //   // change ui
-  //   answerTextElem.style.display = "block";
-  //   answerTextElem.style.display = "block";
-  //   answerImgElem.style.display = "block";
-  // }
-
-  // static next() {
-  //   console.log("next");
-  //   // change text
-  //   const nextChord = this.#getRandomChord();
-  //   console.log(nextChord);
-  //   questionTextElem.textContent = nextChord;
-  //   answerTextElem.textContent = chordToPitchNames[nextChord].join(" - ");
-  //   answerImgElem.src = chordToImgLocation[nextChord];
-  //   // change ui
-  //   answerTextElem.style.display = "none";
-  //   answerTextElem.style.display = "none";
-  //   answerImgElem.style.display = "none";
-  // }
 }
