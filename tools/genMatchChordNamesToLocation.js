@@ -13,6 +13,7 @@ const pitches = [
   "D",
   "D#",
   "Eb",
+  "E",
   "F",
   "F#",
   "Gb",
